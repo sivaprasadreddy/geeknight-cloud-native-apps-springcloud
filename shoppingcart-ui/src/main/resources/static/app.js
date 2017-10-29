@@ -18,7 +18,8 @@ new Vue({
     methods: {
         fetchProducts: function() {
             $.ajax({
-                url: 'http://localhost:9191/api/products'
+               // url: 'http://localhost:9191/api/products'
+                url: '/api/catalog-service/products'
             })
             .done(function(data) {
                 this.products = data;
@@ -46,7 +47,8 @@ new Vue({
         placeOrder: function () {
             $.ajax({
                 type: 'POST',
-                url: 'http://localhost:9292/orders',
+                //url: 'http://localhost:9292/orders',
+                url: '/api/order-service/orders',
                 contentType : 'application/json',
                 data: JSON.stringify(this.cart)
             })
@@ -63,7 +65,8 @@ new Vue({
         searchOrder: function () {
             $.ajax({
                 type: 'GET',
-                url: 'http://localhost:9292/orders/'+this.searchOrderId,
+                //url: 'http://localhost:9292/orders/'+this.searchOrderId,
+                url: '/api/order-service/orders/'+this.searchOrderId,
                 contentType : 'application/json'
             })
             .done(function(data) {

@@ -16,7 +16,7 @@ public class InventoryController {
         this.repo = repo;
     }
 
-    @GetMapping("/api/inventory")
+    @GetMapping("/inventory")
     @HystrixCommand
     public List<InventoryItem> getInventory() {
         return repo.findAll();
