@@ -31,6 +31,7 @@ public class CatalogServiceApplication {
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
+	/*
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurerAdapter() {
@@ -45,4 +46,5 @@ public class CatalogServiceApplication {
 			}
 		};
 	}
+	*/
 }

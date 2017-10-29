@@ -18,7 +18,7 @@ new Vue({
     methods: {
         fetchProducts: function() {
             $.ajax({
-               // url: 'http://localhost:9191/api/products'
+               // url: 'http://localhost:9191/products'
                 url: '/api/catalog-service/products'
             })
             .done(function(data) {

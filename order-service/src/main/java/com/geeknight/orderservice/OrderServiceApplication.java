@@ -18,6 +18,7 @@ public class OrderServiceApplication {
 		SpringApplication.run(OrderServiceApplication.class, args);
 	}
 
+	/*
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurerAdapter() {
@@ -32,4 +33,5 @@ public class OrderServiceApplication {
 			}
 		};
 	}
+	*/
 }
