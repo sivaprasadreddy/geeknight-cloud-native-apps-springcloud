@@ -4,9 +4,7 @@ node {
             $class: 'GitSCM',
             branches: [[name: '*/master']],
             doGenerateSubmoduleConfigurations: false,
-            extensions: [[$class: 'SparseCheckoutPaths',
-                     sparseCheckoutPaths: [[path: 'inventory-service']]
-            ]],
+            extensions: [],
             submoduleCfg: [],
             userRemoteConfigs: [[url: 'https://github.com/sivaprasadreddy/geeknight-cloud-native-apps-springcloud.git']]
         ])
