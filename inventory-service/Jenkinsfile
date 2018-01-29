@@ -12,7 +12,7 @@ node {
         ])
 
       stage('Build')
-        sh 'mvnw clean package'
+        sh './mvnw clean package'
 
 
 }
