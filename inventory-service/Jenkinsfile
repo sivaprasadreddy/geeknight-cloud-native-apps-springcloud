@@ -1,5 +1,5 @@
 node {
-      stage('SCM')
+      stage('SCM') {
         checkout([
             $class: 'GitSCM',
             branches: [[name: '*/master']],
@@ -10,9 +10,11 @@ node {
             submoduleCfg: [],
             userRemoteConfigs: [[url: 'https://github.com/sivaprasadreddy/geeknight-cloud-native-apps-springcloud.git']]
         ])
+      }
 
-      stage('Build')
+      stage('Build'){
+        sh 'cd inventory-service'
         sh './mvnw clean package'
-
+      }
 
 }
