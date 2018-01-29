@@ -13,8 +13,7 @@ node {
       }
 
       stage('Build'){
-        sh 'cd inventory-service'
-        sh './mvnw clean package'
+        sh 'cd inventory-service && ./mvnw clean package'
       }
 
 }

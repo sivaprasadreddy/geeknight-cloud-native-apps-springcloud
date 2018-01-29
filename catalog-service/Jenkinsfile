@@ -13,8 +13,7 @@ node {
       }
 
       stage('Build'){
-          sh 'cd catalog-service'
-          sh './mvnw clean package'
+          sh 'cd catalog-service && ./mvnw clean package'
       }
 
 }
